@@ -1,8 +1,5 @@
 # node files
-
-# 20221019 publishing the dist directory to github
-# dist 
-
+dist
 node_modules
 
 # iOS files
