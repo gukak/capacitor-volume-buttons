@@ -1,0 +1,101 @@
+{
+  "api": {
+    "name": "CapacitorVolumeButtonsPlugin",
+    "slug": "capacitorvolumebuttonsplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "addListener",
+        "signature": "(event: 'volumeButtonPressed', listenerFunc: VolumeButtonPressedListener) => Promise<PluginListenerHandle> & PluginListenerHandle",
+        "parameters": [
+          {
+            "name": "event",
+            "docs": "",
+            "type": "'volumeButtonPressed'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "VolumeButtonPressedListener"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
+        "tags": [
+          {
+            "name": "since",
+            "text": "1.0.0"
+          }
+        ],
+        "docs": "Listen for presses on the hardware volume buttons",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "VolumeButtonPressedListener"
+        ],
+        "slug": "addlistenervolumebuttonpressed"
+      },
+      {
+        "name": "removeAllListeners",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "1.0.0"
+          }
+        ],
+        "docs": "Removes all listeners for this plugin",
+        "complexTypes": [],
+        "slug": "removealllisteners"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "PluginListenerHandle",
+      "slug": "pluginlistenerhandle",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "remove",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "() => Promise<void>"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [
+    {
+      "name": "VolumeButtonPressedListener",
+      "slug": "volumebuttonpressedlistener",
+      "docs": "",
+      "types": [
+        {
+          "text": "({ direction, }: VolumeButtonPressed): void",
+          "complexTypes": [
+            "VolumeButtonPressed"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "VolumeButtonPressed",
+      "slug": "volumebuttonpressed",
+      "docs": "",
+      "types": [
+        {
+          "text": "{ direction: 'up' | 'down' }",
+          "complexTypes": []
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": []
+}
